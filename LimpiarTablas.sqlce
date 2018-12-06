@@ -1,0 +1,38 @@
+Delete AjustesInventario
+go
+Delete AjustesInventarioIngredientes
+go
+Delete Clientes
+go
+Delete Compras
+go
+Delete ComprasIngredientes
+go
+Delete Contadores
+go
+Delete Facturas
+go
+Delete FacturasPlatos
+go
+Delete Ingredientes
+go
+Delete IngredientesInventarios
+go
+Delete Mesas
+go
+Delete MesasAbiertas
+go
+Delete MesasAbiertasPlatos
+go
+Delete Platos
+go
+Delete PlatosComentarios
+go
+Delete PlatosContornos
+go
+Delete PlatosIngredientes
+go
+Delete Proveedores
+go
+Delete Usuarios
+go

@@ -1,0 +1,1557 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="FeriaModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.3.5" ProviderManifestToken="3.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="FeriaModelStoreContainer">
+          <EntitySet Name="AjustesInventario" EntityType="FeriaModel.Store.AjustesInventario" store:Type="Tables" />
+          <EntitySet Name="AjustesInventarioIngredientes" EntityType="FeriaModel.Store.AjustesInventarioIngredientes" store:Type="Tables" />
+          <EntitySet Name="Clientes" EntityType="FeriaModel.Store.Clientes" store:Type="Tables" />
+          <EntitySet Name="Compras" EntityType="FeriaModel.Store.Compras" store:Type="Tables" />
+          <EntitySet Name="ComprasIngredientes" EntityType="FeriaModel.Store.ComprasIngredientes" store:Type="Tables" />
+          <EntitySet Name="Contadores" EntityType="FeriaModel.Store.Contadores" store:Type="Tables" />
+          <EntitySet Name="Facturas" EntityType="FeriaModel.Store.Facturas" store:Type="Tables" />
+          <EntitySet Name="FacturasPlatos" EntityType="FeriaModel.Store.FacturasPlatos" store:Type="Tables" />
+          <EntitySet Name="Ingredientes" EntityType="FeriaModel.Store.Ingredientes" store:Type="Tables" />
+          <EntitySet Name="IngredientesInventarios" EntityType="FeriaModel.Store.IngredientesInventarios" store:Type="Tables" />
+          <EntitySet Name="LibroVentas" EntityType="FeriaModel.Store.LibroVentas" store:Type="Tables" />
+          <EntitySet Name="Mesas" EntityType="FeriaModel.Store.Mesas" store:Type="Tables" />
+          <EntitySet Name="MesasAbiertas" EntityType="FeriaModel.Store.MesasAbiertas" store:Type="Tables" />
+          <EntitySet Name="MesasAbiertasPlatos" EntityType="FeriaModel.Store.MesasAbiertasPlatos" store:Type="Tables" />
+          <EntitySet Name="Parametros" EntityType="FeriaModel.Store.Parametros" store:Type="Tables" />
+          <EntitySet Name="Platos" EntityType="FeriaModel.Store.Platos" store:Type="Tables" />
+          <EntitySet Name="PlatosCombos" EntityType="FeriaModel.Store.PlatosCombos" store:Type="Tables" />
+          <EntitySet Name="PlatosComentarios" EntityType="FeriaModel.Store.PlatosComentarios" store:Type="Tables" />
+          <EntitySet Name="PlatosContornos" EntityType="FeriaModel.Store.PlatosContornos" store:Type="Tables" />
+          <EntitySet Name="PlatosIngredientes" EntityType="FeriaModel.Store.PlatosIngredientes" store:Type="Tables" />
+          <EntitySet Name="PlatosPresentacion" EntityType="FeriaModel.Store.PlatosPresentacion" store:Type="Tables" />
+          <EntitySet Name="Proveedores" EntityType="FeriaModel.Store.Proveedores" store:Type="Tables" />
+          <EntitySet Name="Usuarios" EntityType="FeriaModel.Store.Usuarios" store:Type="Tables" />
+          <AssociationSet Name="AjusteIngrediente" Association="FeriaModel.Store.AjusteIngrediente">
+            <End Role="AjustesInventario" EntitySet="AjustesInventario" />
+            <End Role="AjustesInventarioIngredientes" EntitySet="AjustesInventarioIngredientes" />
+          </AssociationSet>
+          <AssociationSet Name="CompraIngredientes" Association="FeriaModel.Store.CompraIngredientes">
+            <End Role="Compras" EntitySet="Compras" />
+            <End Role="ComprasIngredientes" EntitySet="ComprasIngredientes" />
+          </AssociationSet>
+          <AssociationSet Name="FacturaPlato" Association="FeriaModel.Store.FacturaPlato">
+            <End Role="Facturas" EntitySet="Facturas" />
+            <End Role="FacturasPlatos" EntitySet="FacturasPlatos" />
+          </AssociationSet>
+          <AssociationSet Name="Ingredienteinventarios" Association="FeriaModel.Store.Ingredienteinventarios">
+            <End Role="Ingredientes" EntitySet="Ingredientes" />
+            <End Role="IngredientesInventarios" EntitySet="IngredientesInventarios" />
+          </AssociationSet>
+          <AssociationSet Name="MesaAbiertaPlato" Association="FeriaModel.Store.MesaAbiertaPlato">
+            <End Role="MesasAbiertas" EntitySet="MesasAbiertas" />
+            <End Role="MesasAbiertasPlatos" EntitySet="MesasAbiertasPlatos" />
+          </AssociationSet>
+          <AssociationSet Name="MesaMesaAbierta" Association="FeriaModel.Store.MesaMesaAbierta">
+            <End Role="Mesas" EntitySet="Mesas" />
+            <End Role="MesasAbiertas" EntitySet="MesasAbiertas" />
+          </AssociationSet>
+          <AssociationSet Name="PlatoCombo" Association="FeriaModel.Store.PlatoCombo">
+            <End Role="Platos" EntitySet="Platos" />
+            <End Role="PlatosCombos" EntitySet="PlatosCombos" />
+          </AssociationSet>
+          <AssociationSet Name="PlatoComentario" Association="FeriaModel.Store.PlatoComentario">
+            <End Role="Platos" EntitySet="Platos" />
+            <End Role="PlatosComentarios" EntitySet="PlatosComentarios" />
+          </AssociationSet>
+          <AssociationSet Name="PlatoContorno" Association="FeriaModel.Store.PlatoContorno">
+            <End Role="Platos" EntitySet="Platos" />
+            <End Role="PlatosContornos" EntitySet="PlatosContornos" />
+          </AssociationSet>
+          <AssociationSet Name="PlatoIngrediente" Association="FeriaModel.Store.PlatoIngrediente">
+            <End Role="Platos" EntitySet="Platos" />
+            <End Role="PlatosIngredientes" EntitySet="PlatosIngredientes" />
+          </AssociationSet>
+          <AssociationSet Name="PlatoPresentacion" Association="FeriaModel.Store.PlatoPresentacion">
+            <End Role="Platos" EntitySet="Platos" />
+            <End Role="PlatosPresentacion" EntitySet="PlatosPresentacion" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AjustesInventario">
+          <Key>
+            <PropertyRef Name="IdAjuste" />
+          </Key>
+          <Property Name="IdAjuste" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="Fecha" Type="datetime" />
+          <Property Name="Numero" Type="datetime" />
+          <Property Name="IdUsuario" Type="nvarchar" MaxLength="6" />
+          <Property Name="Comentarios" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="AjustesInventarioIngredientes">
+          <Key>
+            <PropertyRef Name="IdAjustesInventarioIngredientes" />
+          </Key>
+          <Property Name="IdAjustesInventarioIngredientes" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="IdIngrediente" Type="nvarchar" MaxLength="6" />
+          <Property Name="Ingrediente" Type="nvarchar" MaxLength="100" />
+          <Property Name="UnidadMedida" Type="nvarchar" MaxLength="100" />
+          <Property Name="ExistenciaAnterior" Type="float" />
+          <Property Name="ExistenciaNueva" Type="float" />
+          <Property Name="Ajuste" Type="float" />
+          <Property Name="IdAjuste" Type="nvarchar" MaxLength="6" />
+        </EntityType>
+        <EntityType Name="Clientes">
+          <Key>
+            <PropertyRef Name="CedulaRif" />
+          </Key>
+          <Property Name="CedulaRif" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="RazonSocial" Type="nvarchar" MaxLength="100" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="100" />
+          <Property Name="DiasCredito" Type="int" />
+          <Property Name="LimiteCredito" Type="float" />
+          <Property Name="Telefonos" Type="nvarchar" MaxLength="100" />
+          <Property Name="Contacto" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Compras">
+          <Key>
+            <PropertyRef Name="IdCompra" />
+          </Key>
+          <Property Name="IdCompra" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="Mes" Type="int" />
+          <Property Name="Año" Type="int" />
+          <Property Name="Fecha" Type="datetime" />
+          <Property Name="Numero" Type="nvarchar" MaxLength="100" />
+          <Property Name="NumeroControl" Type="nvarchar" MaxLength="100" />
+          <Property Name="MontoExento" Type="float" />
+          <Property Name="MontoGravable" Type="float" />
+          <Property Name="MontoIva" Type="float" />
+          <Property Name="MontoTotal" Type="float" />
+          <Property Name="CedulaRif" Type="nvarchar" MaxLength="20" />
+          <Property Name="RazonSocial" Type="nvarchar" MaxLength="150" />
+          <Property Name="TasaIva" Type="float" />
+          <Property Name="LibroCompras" Type="bit" />
+          <Property Name="MontoSinDerechoCredito" Type="float" />
+          <Property Name="IdProveedor" Type="nvarchar" MaxLength="6" />
+          <Property Name="IdUsuario" Type="nvarchar" MaxLength="6" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="150" />
+          <Property Name="FechaInventario" Type="datetime" />
+          <Property Name="ActualizadoInventario" Type="bit" />
+        </EntityType>
+        <EntityType Name="ComprasIngredientes">
+          <Key>
+            <PropertyRef Name="IdCompraIngrediente" />
+          </Key>
+          <Property Name="IdCompraIngrediente" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="IdCompra" Type="nvarchar" MaxLength="6" />
+          <Property Name="Ingrediente" Type="nvarchar" MaxLength="100" />
+          <Property Name="Cantidad" Type="float" />
+          <Property Name="Costo" Type="float" />
+          <Property Name="TasaIva" Type="float" />
+          <Property Name="CostoIva" Type="float" />
+          <Property Name="CantidadNeta" Type="float" />
+          <Property Name="Total" Type="float" />
+          <Property Name="IdIngrediente" Type="nvarchar" MaxLength="6" />
+          <Property Name="ExistenciaAnterior" Type="float" />
+          <Property Name="ExistenciaNueva" Type="float" />
+          <Property Name="UnidadMedida" Type="nvarchar" MaxLength="100" />
+          <Property Name="Iva" Type="float" />
+          <Property Name="CostoNeto" Type="float" />
+        </EntityType>
+        <EntityType Name="Contadores">
+          <Key>
+            <PropertyRef Name="Variable" />
+          </Key>
+          <Property Name="Variable" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Valor" Type="int" />
+        </EntityType>
+        <EntityType Name="Facturas">
+          <Key>
+            <PropertyRef Name="IdFactura" />
+          </Key>
+          <Property Name="IdFactura" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="Fecha" Type="datetime" />
+          <Property Name="Numero" Type="nvarchar" MaxLength="10" />
+          <Property Name="Cajero" Type="nvarchar" MaxLength="100" />
+          <Property Name="CedulaRif" Type="nvarchar" MaxLength="100" />
+          <Property Name="RazonSocial" Type="nvarchar" MaxLength="100" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="250" />
+          <Property Name="MontoGravable" Type="float" />
+          <Property Name="MontoExento" Type="float" />
+          <Property Name="MontoIva" Type="float" />
+          <Property Name="MontoTotal" Type="float" />
+          <Property Name="Efectivo" Type="float" />
+          <Property Name="Cheque" Type="float" />
+          <Property Name="Tarjeta" Type="float" />
+          <Property Name="NumeroZ" Type="nvarchar" MaxLength="10" />
+          <Property Name="MaquinaFiscal" Type="nvarchar" MaxLength="14" />
+          <Property Name="IdCajero" Type="nvarchar" MaxLength="6" />
+          <Property Name="Hora" Type="datetime" />
+          <Property Name="Cambio" Type="float" />
+          <Property Name="Anulado" Type="bit" />
+          <Property Name="TasaIva" Type="float" />
+          <Property Name="CestaTicket" Type="float" />
+          <Property Name="Saldo" Type="float" />
+          <Property Name="ConsumoInterno" Type="float" />
+          <Property Name="Tipo" Type="nvarchar" MaxLength="20" />
+          <Property Name="NumeroOrden" Type="nvarchar" MaxLength="100" />
+          <Property Name="LibroVentas" Type="bit" />
+        </EntityType>
+        <EntityType Name="FacturasPlatos">
+          <Key>
+            <PropertyRef Name="IdFacturaPlato" />
+          </Key>
+          <Property Name="IdFacturaPlato" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="IdFactura" Type="nvarchar" MaxLength="10" />
+          <Property Name="Idplato" Type="nvarchar" MaxLength="6" />
+          <Property Name="Codigo" Type="nvarchar" MaxLength="20" />
+          <Property Name="Grupo" Type="nvarchar" MaxLength="20" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="100" />
+          <Property Name="Cantidad" Type="int" />
+          <Property Name="Precio" Type="float" />
+          <Property Name="TasaIva" Type="float" />
+          <Property Name="PrecioConIva" Type="float" />
+          <Property Name="Total" Type="float" />
+        </EntityType>
+        <EntityType Name="Ingredientes">
+          <Key>
+            <PropertyRef Name="IdIngrediente" />
+          </Key>
+          <Property Name="IdIngrediente" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="100" />
+          <Property Name="UnidadMedida" Type="nvarchar" MaxLength="20" />
+          <Property Name="Costo" Type="float" />
+          <Property Name="Raciones" Type="float" />
+          <Property Name="Existencia" Type="float" />
+          <Property Name="Grupo" Type="nvarchar" MaxLength="100" />
+          <Property Name="Activo" Type="bit" />
+          <Property Name="Insumo" Type="bit" />
+          <Property Name="LlevaInventario" Type="bit" />
+          <Property Name="TasaIva" Type="float" />
+        </EntityType>
+        <EntityType Name="IngredientesInventarios">
+          <Key>
+            <PropertyRef Name="IdIngredienteInventario" />
+          </Key>
+          <Property Name="IdIngredienteInventario" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="IdIngrediente" Type="nvarchar" MaxLength="6" />
+          <Property Name="Ingrediente" Type="nvarchar" MaxLength="100" />
+          <Property Name="Inicio" Type="float" />
+          <Property Name="Entradas" Type="float" />
+          <Property Name="Salidas" Type="float" />
+          <Property Name="Final" Type="float" />
+          <Property Name="Fecha" Type="datetime" />
+          <Property Name="InventarioFisico" Type="float" />
+          <Property Name="Ajuste" Type="float" />
+        </EntityType>
+        <EntityType Name="LibroVentas">
+          <Key>
+            <PropertyRef Name="IdLibroVentas" />
+          </Key>
+          <Property Name="IdLibroVentas" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="Fecha" Type="datetime" />
+          <Property Name="Factura" Type="nvarchar" MaxLength="20" />
+          <Property Name="NumeroZ" Type="nvarchar" MaxLength="6" />
+          <Property Name="RegistroMaquinaFiscal" Type="nvarchar" MaxLength="20" />
+          <Property Name="RazonSocial" Type="nvarchar" MaxLength="150" />
+          <Property Name="CedulaRif" Type="nvarchar" MaxLength="20" />
+          <Property Name="Comprobante" Type="nvarchar" MaxLength="20" />
+          <Property Name="FacturaAfectada" Type="nvarchar" MaxLength="20" />
+          <Property Name="TipoOperacion" Type="nvarchar" MaxLength="2" />
+          <Property Name="MontoTotal" Type="float" />
+          <Property Name="MontoGravable" Type="float" />
+          <Property Name="MontoExento" Type="float" />
+          <Property Name="MontoIva" Type="float" />
+          <Property Name="TasaIva" Type="float" />
+          <Property Name="IvaRetenido" Type="float" />
+          <Property Name="Año" Type="int" />
+          <Property Name="Mes" Type="int" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="150" />
+          <Property Name="MontoServicio" Type="float" />
+          <Property Name="MontoGravableNoContribuyentes" Type="float" />
+          <Property Name="MontoIvaNoContribuyentes" Type="float" />
+          <Property Name="MontoGravableContribuyentes" Type="float" />
+          <Property Name="MontoIvaContribuyentes" Type="float" />
+          <Property Name="TasaIvaNoContribuyentes" Type="float" />
+          <Property Name="TasaIvaContribuyentes" Type="float" />
+          <Property Name="Inicio" Type="nvarchar" MaxLength="10" />
+          <Property Name="Final" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Mesas">
+          <Key>
+            <PropertyRef Name="IdMesa" />
+          </Key>
+          <Property Name="IdMesa" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="Codigo" Type="nvarchar" MaxLength="20" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="100" />
+          <Property Name="Ubicacion" Type="nvarchar" MaxLength="100" />
+          <Property Name="CobraServicio" Type="bit" />
+        </EntityType>
+        <EntityType Name="MesasAbiertas">
+          <Key>
+            <PropertyRef Name="IdMesaAbierta" />
+          </Key>
+          <Property Name="IdMesaAbierta" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="IdMesa" Type="nvarchar" MaxLength="6" />
+          <Property Name="IdMesonero" Type="nvarchar" MaxLength="6" />
+          <Property Name="Mesa" Type="nvarchar" MaxLength="100" />
+          <Property Name="Mesonero" Type="nvarchar" MaxLength="100" />
+          <Property Name="Personas" Type="int" />
+          <Property Name="Apertura" Type="datetime" />
+          <Property Name="MontoGravable" Type="float" />
+          <Property Name="MontoExento" Type="float" />
+          <Property Name="MontoIva" Type="float" />
+          <Property Name="MontoTotal" Type="float" />
+          <Property Name="MontoServicio" Type="float" />
+          <Property Name="Estatus" Type="nvarchar" MaxLength="100" />
+          <Property Name="Numero" Type="nvarchar" MaxLength="6" />
+        </EntityType>
+        <EntityType Name="MesasAbiertasPlatos">
+          <Key>
+            <PropertyRef Name="IdMesaAbiertaPlato" />
+          </Key>
+          <Property Name="IdMesaAbiertaPlato" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="IdMesaAbierta" Type="nvarchar" MaxLength="6" />
+          <Property Name="Idplato" Type="nvarchar" MaxLength="6" />
+          <Property Name="Codigo" Type="nvarchar" MaxLength="100" />
+          <Property Name="Grupo" Type="nvarchar" MaxLength="100" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="100" />
+          <Property Name="Cantidad" Type="int" />
+          <Property Name="Precio" Type="float" />
+          <Property Name="TasaIva" Type="float" />
+          <Property Name="PrecioConIva" Type="float" />
+          <Property Name="Total" Type="float" />
+        </EntityType>
+        <EntityType Name="Parametros">
+          <Key>
+            <PropertyRef Name="Empresa" />
+          </Key>
+          <Property Name="Empresa" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="EmpresaRif" Type="nvarchar" MaxLength="14" />
+          <Property Name="EmpresaDireccion" Type="nvarchar" MaxLength="250" />
+          <Property Name="EmpresaTelefonos" Type="nvarchar" MaxLength="100" />
+          <Property Name="MaquinaFiscal" Type="nvarchar" MaxLength="14" />
+          <Property Name="TasaIva" Type="float" />
+          <Property Name="TipoIva" Type="nvarchar" MaxLength="100" />
+          <Property Name="PuertoImpresoraFiscal" Type="nvarchar" MaxLength="100" />
+          <Property Name="Ciudad" Type="nvarchar" MaxLength="100" />
+          <Property Name="Licencia" Type="nvarchar" MaxLength="100" />
+          <Property Name="ImprimirOrden" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Platos">
+          <Key>
+            <PropertyRef Name="IdPlato" />
+          </Key>
+          <Property Name="IdPlato" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="Grupo" Type="nvarchar" MaxLength="20" />
+          <Property Name="Codigo" Type="nvarchar" MaxLength="6" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="100" />
+          <Property Name="Precio" Type="float" />
+          <Property Name="TasaIva" Type="float" />
+          <Property Name="PrecioConIva" Type="float" />
+          <Property Name="EnviarComanda" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="PlatosCombos">
+          <Key>
+            <PropertyRef Name="IdPlatoCombo" />
+          </Key>
+          <Property Name="IdPlatoCombo" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="IdPlato" Type="nvarchar" MaxLength="6" />
+          <Property Name="IdCombo" Type="nvarchar" MaxLength="6" />
+          <Property Name="Plato" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="PlatosComentarios">
+          <Key>
+            <PropertyRef Name="IdPlatoComentario" />
+          </Key>
+          <Property Name="IdPlatoComentario" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="IdPlato" Type="nvarchar" MaxLength="6" />
+          <Property Name="Comentario" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="PlatosContornos">
+          <Key>
+            <PropertyRef Name="IdPlatoContorno" />
+          </Key>
+          <Property Name="IdPlatoContorno" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="IdPlato" Type="nvarchar" MaxLength="6" />
+          <Property Name="Contorno" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="PlatosIngredientes">
+          <Key>
+            <PropertyRef Name="IdPlatoIngrediente" />
+          </Key>
+          <Property Name="IdPlatoIngrediente" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="IdPlato" Type="nvarchar" MaxLength="6" />
+          <Property Name="IdIngrediente" Type="nvarchar" MaxLength="6" />
+          <Property Name="Cantidad" Type="float" />
+          <Property Name="Raciones" Type="float" />
+          <Property Name="CostoRacion" Type="float" />
+          <Property Name="Ingrediente" Type="nvarchar" MaxLength="100" />
+          <Property Name="UnidadMedida" Type="nvarchar" MaxLength="20" />
+          <Property Name="IdPlatoPresentacion" Type="nvarchar" MaxLength="6" />
+          <Property Name="Total" Type="float" />
+        </EntityType>
+        <EntityType Name="PlatosPresentacion">
+          <Key>
+            <PropertyRef Name="IdPlatoPresentacion" />
+          </Key>
+          <Property Name="IdPlato" Type="nvarchar" MaxLength="6" />
+          <Property Name="Presentacion" Type="nvarchar" MaxLength="100" />
+          <Property Name="IdPlatoPresentacion" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="Precio" Type="float" />
+        </EntityType>
+        <EntityType Name="Proveedores">
+          <Key>
+            <PropertyRef Name="IdProveedor" />
+          </Key>
+          <Property Name="IdProveedor" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="RazonSocial" Type="nvarchar" MaxLength="100" />
+          <Property Name="CedulaRif" Type="nvarchar" MaxLength="20" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="100" />
+          <Property Name="Telefonos" Type="nvarchar" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Name="IdUsuario" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="Cedula" Type="nvarchar" MaxLength="20" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="100" />
+          <Property Name="TipoUsuario" Type="nvarchar" MaxLength="20" />
+          <Property Name="Clave" Type="nvarchar" MaxLength="20" />
+          <Property Name="Codigo" Type="nvarchar" MaxLength="20" />
+          <Property Name="PuedeDarConsumoInterno" Type="bit" />
+          <Property Name="PuedeSepararCuentas" Type="bit" />
+          <Property Name="PuedePedirCorteDeCuenta" Type="bit" />
+          <Property Name="Puntos" Type="float" />
+          <Property Name="Activo" Type="bit" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="200" />
+          <Property Name="Telefonos" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="AjusteIngrediente">
+          <End Role="AjustesInventario" Type="FeriaModel.Store.AjustesInventario" Multiplicity="0..1" />
+          <End Role="AjustesInventarioIngredientes" Type="FeriaModel.Store.AjustesInventarioIngredientes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AjustesInventario">
+              <PropertyRef Name="IdAjuste" />
+            </Principal>
+            <Dependent Role="AjustesInventarioIngredientes">
+              <PropertyRef Name="IdAjuste" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CompraIngredientes">
+          <End Role="Compras" Type="FeriaModel.Store.Compras" Multiplicity="0..1" />
+          <End Role="ComprasIngredientes" Type="FeriaModel.Store.ComprasIngredientes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Compras">
+              <PropertyRef Name="IdCompra" />
+            </Principal>
+            <Dependent Role="ComprasIngredientes">
+              <PropertyRef Name="IdCompra" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FacturaPlato">
+          <End Role="Facturas" Type="FeriaModel.Store.Facturas" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="FacturasPlatos" Type="FeriaModel.Store.FacturasPlatos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Facturas">
+              <PropertyRef Name="IdFactura" />
+            </Principal>
+            <Dependent Role="FacturasPlatos">
+              <PropertyRef Name="IdFactura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Ingredienteinventarios">
+          <End Role="Ingredientes" Type="FeriaModel.Store.Ingredientes" Multiplicity="0..1" />
+          <End Role="IngredientesInventarios" Type="FeriaModel.Store.IngredientesInventarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ingredientes">
+              <PropertyRef Name="IdIngrediente" />
+            </Principal>
+            <Dependent Role="IngredientesInventarios">
+              <PropertyRef Name="IdIngrediente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MesaAbiertaPlato">
+          <End Role="MesasAbiertas" Type="FeriaModel.Store.MesasAbiertas" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="MesasAbiertasPlatos" Type="FeriaModel.Store.MesasAbiertasPlatos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MesasAbiertas">
+              <PropertyRef Name="IdMesaAbierta" />
+            </Principal>
+            <Dependent Role="MesasAbiertasPlatos">
+              <PropertyRef Name="IdMesaAbierta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MesaMesaAbierta">
+          <End Role="Mesas" Type="FeriaModel.Store.Mesas" Multiplicity="0..1" />
+          <End Role="MesasAbiertas" Type="FeriaModel.Store.MesasAbiertas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Mesas">
+              <PropertyRef Name="IdMesa" />
+            </Principal>
+            <Dependent Role="MesasAbiertas">
+              <PropertyRef Name="IdMesa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PlatoCombo">
+          <End Role="Platos" Type="FeriaModel.Store.Platos" Multiplicity="0..1" />
+          <End Role="PlatosCombos" Type="FeriaModel.Store.PlatosCombos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Platos">
+              <PropertyRef Name="IdPlato" />
+            </Principal>
+            <Dependent Role="PlatosCombos">
+              <PropertyRef Name="IdPlato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PlatoComentario">
+          <End Role="Platos" Type="FeriaModel.Store.Platos" Multiplicity="0..1" />
+          <End Role="PlatosComentarios" Type="FeriaModel.Store.PlatosComentarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Platos">
+              <PropertyRef Name="IdPlato" />
+            </Principal>
+            <Dependent Role="PlatosComentarios">
+              <PropertyRef Name="IdPlato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PlatoContorno">
+          <End Role="Platos" Type="FeriaModel.Store.Platos" Multiplicity="0..1" />
+          <End Role="PlatosContornos" Type="FeriaModel.Store.PlatosContornos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Platos">
+              <PropertyRef Name="IdPlato" />
+            </Principal>
+            <Dependent Role="PlatosContornos">
+              <PropertyRef Name="IdPlato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PlatoIngrediente">
+          <End Role="Platos" Type="FeriaModel.Store.Platos" Multiplicity="0..1" />
+          <End Role="PlatosIngredientes" Type="FeriaModel.Store.PlatosIngredientes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Platos">
+              <PropertyRef Name="IdPlato" />
+            </Principal>
+            <Dependent Role="PlatosIngredientes">
+              <PropertyRef Name="IdPlato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PlatoPresentacion">
+          <End Role="Platos" Type="FeriaModel.Store.Platos" Multiplicity="0..1" />
+          <End Role="PlatosPresentacion" Type="FeriaModel.Store.PlatosPresentacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Platos">
+              <PropertyRef Name="IdPlato" />
+            </Principal>
+            <Dependent Role="PlatosPresentacion">
+              <PropertyRef Name="IdPlato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FeriaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="FeriaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AjustesInventarios" EntityType="FeriaModel.AjustesInventario" />
+          <EntitySet Name="AjustesInventarioIngredientes" EntityType="FeriaModel.AjustesInventarioIngrediente" />
+          <EntitySet Name="Clientes" EntityType="FeriaModel.Cliente" />
+          <EntitySet Name="Compras" EntityType="FeriaModel.Compra" />
+          <EntitySet Name="ComprasIngredientes" EntityType="FeriaModel.ComprasIngrediente" />
+          <EntitySet Name="Contadores" EntityType="FeriaModel.Contadore" />
+          <EntitySet Name="Ingredientes" EntityType="FeriaModel.Ingrediente" />
+          <EntitySet Name="IngredientesInventarios" EntityType="FeriaModel.IngredientesInventario" />
+          <EntitySet Name="Mesas" EntityType="FeriaModel.Mesa" />
+          <EntitySet Name="MesasAbiertas" EntityType="FeriaModel.MesasAbierta" />
+          <EntitySet Name="MesasAbiertasPlatos" EntityType="FeriaModel.MesasAbiertasPlato" />
+          <EntitySet Name="Parametros" EntityType="FeriaModel.Parametro" />
+          <EntitySet Name="Platos" EntityType="FeriaModel.Plato" />
+          <EntitySet Name="PlatosComentarios" EntityType="FeriaModel.PlatosComentario" />
+          <EntitySet Name="PlatosContornos" EntityType="FeriaModel.PlatosContorno" />
+          <EntitySet Name="Proveedores" EntityType="FeriaModel.Proveedore" />
+          <EntitySet Name="Usuarios" EntityType="FeriaModel.Usuario" />
+          <AssociationSet Name="AjusteIngrediente" Association="FeriaModel.AjusteIngrediente">
+            <End Role="AjustesInventario" EntitySet="AjustesInventarios" />
+            <End Role="AjustesInventarioIngredientes" EntitySet="AjustesInventarioIngredientes" />
+          </AssociationSet>
+          <AssociationSet Name="CompraIngredientes" Association="FeriaModel.CompraIngredientes">
+            <End Role="Compras" EntitySet="Compras" />
+            <End Role="ComprasIngredientes" EntitySet="ComprasIngredientes" />
+          </AssociationSet>
+          <AssociationSet Name="Ingredienteinventarios" Association="FeriaModel.Ingredienteinventarios">
+            <End Role="Ingredientes" EntitySet="Ingredientes" />
+            <End Role="IngredientesInventarios" EntitySet="IngredientesInventarios" />
+          </AssociationSet>
+          <AssociationSet Name="MesaMesaAbierta" Association="FeriaModel.MesaMesaAbierta">
+            <End Role="Mesas" EntitySet="Mesas" />
+            <End Role="MesasAbiertas" EntitySet="MesasAbiertas" />
+          </AssociationSet>
+          <AssociationSet Name="MesaAbiertaPlato" Association="FeriaModel.MesaAbiertaPlato">
+            <End Role="MesasAbiertas" EntitySet="MesasAbiertas" />
+            <End Role="MesasAbiertasPlatos" EntitySet="MesasAbiertasPlatos" />
+          </AssociationSet>
+          <AssociationSet Name="PlatoComentario" Association="FeriaModel.PlatoComentario">
+            <End Role="Platos" EntitySet="Platos" />
+            <End Role="PlatosComentarios" EntitySet="PlatosComentarios" />
+          </AssociationSet>
+          <AssociationSet Name="PlatoContorno" Association="FeriaModel.PlatoContorno">
+            <End Role="Platos" EntitySet="Platos" />
+            <End Role="PlatosContornos" EntitySet="PlatosContornos" />
+          </AssociationSet>
+          <EntitySet Name="PlatosIngredientes" EntityType="FeriaModel.PlatosIngrediente" />
+          <AssociationSet Name="PlatoIngrediente" Association="FeriaModel.PlatoIngrediente">
+            <End Role="Plato" EntitySet="Platos" />
+            <End Role="PlatosIngrediente" EntitySet="PlatosIngredientes" />
+          </AssociationSet>
+          <EntitySet Name="Facturas" EntityType="FeriaModel.Factura" />
+          <EntitySet Name="FacturasPlatos" EntityType="FeriaModel.FacturasPlato" />
+          <EntitySet Name="PlatosCombos" EntityType="FeriaModel.PlatosCombo" />
+          <EntitySet Name="PlatosPresentacions" EntityType="FeriaModel.PlatosPresentacion" />
+          <AssociationSet Name="FacturasDetalles" Association="FeriaModel.FacturasDetalles">
+            <End Role="Factura" EntitySet="Facturas" />
+            <End Role="FacturasPlato" EntitySet="FacturasPlatos" />
+          </AssociationSet>
+          <AssociationSet Name="PlatoCombo" Association="FeriaModel.PlatoCombo">
+            <End Role="Plato" EntitySet="Platos" />
+            <End Role="PlatosCombo" EntitySet="PlatosCombos" />
+          </AssociationSet>
+          <AssociationSet Name="PlatoPresentacion" Association="FeriaModel.PlatoPresentacion">
+            <End Role="Plato" EntitySet="Platos" />
+            <End Role="PlatosPresentacion" EntitySet="PlatosPresentacions" />
+          </AssociationSet>
+          <EntitySet Name="LibroVentas" EntityType="FeriaModel.LibroVenta" />
+        </EntityContainer>
+        <EntityType Name="AjustesInventario">
+          <Key>
+            <PropertyRef Name="IdAjuste" />
+          </Key>
+          <Property Name="IdAjuste" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="Fecha" Type="DateTime" />
+          <Property Name="Numero" Type="DateTime" />
+          <Property Name="IdUsuario" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="Comentarios" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="AjustesInventarioIngredientes" Relationship="FeriaModel.AjusteIngrediente" FromRole="AjustesInventario" ToRole="AjustesInventarioIngredientes" />
+        </EntityType>
+        <EntityType Name="AjustesInventarioIngrediente">
+          <Key>
+            <PropertyRef Name="IdAjustesInventarioIngredientes" />
+          </Key>
+          <Property Name="IdAjustesInventarioIngredientes" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="IdIngrediente" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="Ingrediente" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="UnidadMedida" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ExistenciaAnterior" Type="Double" />
+          <Property Name="ExistenciaNueva" Type="Double" />
+          <Property Name="Ajuste" Type="Double" />
+          <Property Name="IdAjuste" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="AjustesInventario" Relationship="FeriaModel.AjusteIngrediente" FromRole="AjustesInventarioIngredientes" ToRole="AjustesInventario" />
+        </EntityType>
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="CedulaRif" />
+          </Key>
+          <Property Name="CedulaRif" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="RazonSocial" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Direccion" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="DiasCredito" Type="Int32" />
+          <Property Name="LimiteCredito" Type="Double" />
+          <Property Name="Telefonos" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Contacto" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Compra">
+          <Key>
+            <PropertyRef Name="IdCompra" />
+          </Key>
+          <Property Name="IdCompra" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="Mes" Type="Int32" />
+          <Property Name="Año" Type="Int32" />
+          <Property Name="Fecha" Type="DateTime" />
+          <Property Name="Numero" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="NumeroControl" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="MontoExento" Type="Double" />
+          <Property Name="MontoGravable" Type="Double" />
+          <Property Name="MontoIva" Type="Double" />
+          <Property Name="MontoTotal" Type="Double" />
+          <Property Name="CedulaRif" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="RazonSocial" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="TasaIva" Type="Double" />
+          <Property Name="LibroCompras" Type="Boolean" />
+          <Property Name="MontoSinDerechoCredito" Type="Double" />
+          <Property Name="IdProveedor" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="IdUsuario" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="ComprasIngredientes" Relationship="FeriaModel.CompraIngredientes" FromRole="Compras" ToRole="ComprasIngredientes" />
+          <Property Type="String" Name="Direccion" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="FechaInventario" />
+          <Property Type="Boolean" Name="ActualizadoInventario" />
+        </EntityType>
+        <EntityType Name="ComprasIngrediente">
+          <Key>
+            <PropertyRef Name="IdCompraIngrediente" />
+          </Key>
+          <Property Name="IdCompraIngrediente" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="IdCompra" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="Ingrediente" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Cantidad" Type="Double" />
+          <Property Name="Costo" Type="Double" />
+          <Property Name="TasaIva" Type="Double" />
+          <Property Name="CostoIva" Type="Double" />
+          <Property Name="CantidadNeta" Type="Double" />
+          <Property Name="Total" Type="Double" />
+          <Property Name="IdIngrediente" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="ExistenciaAnterior" Type="Double" />
+          <Property Name="ExistenciaNueva" Type="Double" />
+          <Property Name="UnidadMedida" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Compra" Relationship="FeriaModel.CompraIngredientes" FromRole="ComprasIngredientes" ToRole="Compras" />
+          <Property Type="Double" Name="Iva" />
+          <Property Type="Double" Name="CostoNeto" />
+        </EntityType>
+        <EntityType Name="Contadore">
+          <Key>
+            <PropertyRef Name="Variable" />
+          </Key>
+          <Property Name="Variable" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Valor" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Ingrediente">
+          <Key>
+            <PropertyRef Name="IdIngrediente" />
+          </Key>
+          <Property Name="IdIngrediente" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="UnidadMedida" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Costo" Type="Double" />
+          <Property Name="Raciones" Type="Double" />
+          <Property Name="Existencia" Type="Double" />
+          <Property Name="Grupo" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="IngredientesInventarios" Relationship="FeriaModel.Ingredienteinventarios" FromRole="Ingredientes" ToRole="IngredientesInventarios" />
+          <Property Type="Boolean" Name="Activo" />
+          <Property Type="Boolean" Name="Insumo" />
+          <Property Type="Boolean" Name="LlevaInventario" />
+          <Property Type="Double" Name="TasaIva" />
+        </EntityType>
+        <EntityType Name="IngredientesInventario">
+          <Key>
+            <PropertyRef Name="IdIngredienteInventario" />
+          </Key>
+          <Property Name="IdIngredienteInventario" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="IdIngrediente" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="Ingrediente" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Inicio" Type="Double" />
+          <Property Name="Entradas" Type="Double" />
+          <Property Name="Salidas" Type="Double" />
+          <Property Name="Final" Type="Double" />
+          <Property Name="Fecha" Type="DateTime" />
+          <Property Name="InventarioFisico" Type="Double" />
+          <Property Name="Ajuste" Type="Double" />
+          <NavigationProperty Name="Ingrediente1" Relationship="FeriaModel.Ingredienteinventarios" FromRole="IngredientesInventarios" ToRole="Ingredientes" />
+        </EntityType>
+        <EntityType Name="Mesa">
+          <Key>
+            <PropertyRef Name="IdMesa" />
+          </Key>
+          <Property Name="IdMesa" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="Codigo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Ubicacion" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="CobraServicio" Type="Boolean" />
+          <NavigationProperty Name="MesasAbiertas" Relationship="FeriaModel.MesaMesaAbierta" FromRole="Mesas" ToRole="MesasAbiertas" />
+        </EntityType>
+        <EntityType Name="MesasAbierta">
+          <Key>
+            <PropertyRef Name="IdMesaAbierta" />
+          </Key>
+          <Property Name="IdMesaAbierta" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="IdMesa" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="IdMesonero" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="Mesa" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Mesonero" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Personas" Type="Int32" />
+          <Property Name="Apertura" Type="DateTime" />
+          <Property Name="MontoGravable" Type="Double" />
+          <Property Name="MontoExento" Type="Double" />
+          <Property Name="MontoIva" Type="Double" />
+          <Property Name="MontoTotal" Type="Double" />
+          <Property Name="MontoServicio" Type="Double" />
+          <Property Name="Estatus" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Numero" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Mesa1" Relationship="FeriaModel.MesaMesaAbierta" FromRole="MesasAbiertas" ToRole="Mesas" />
+          <NavigationProperty Name="MesasAbiertasPlatos" Relationship="FeriaModel.MesaAbiertaPlato" FromRole="MesasAbiertas" ToRole="MesasAbiertasPlatos" />
+        </EntityType>
+        <EntityType Name="MesasAbiertasPlato">
+          <Key>
+            <PropertyRef Name="IdMesaAbiertaPlato" />
+          </Key>
+          <Property Name="IdMesaAbiertaPlato" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="IdMesaAbierta" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="Idplato" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="Codigo" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Grupo" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Cantidad" Type="Int32" />
+          <Property Name="Precio" Type="Double" />
+          <Property Name="TasaIva" Type="Double" />
+          <Property Name="PrecioConIva" Type="Double" />
+          <Property Name="Total" Type="Double" />
+          <NavigationProperty Name="MesasAbierta" Relationship="FeriaModel.MesaAbiertaPlato" FromRole="MesasAbiertasPlatos" ToRole="MesasAbiertas" />
+        </EntityType>
+        <EntityType Name="Parametro">
+          <Key>
+            <PropertyRef Name="Empresa" />
+          </Key>
+          <Property Name="Empresa" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="EmpresaRif" Type="String" MaxLength="14" Unicode="true" FixedLength="false" />
+          <Property Name="EmpresaDireccion" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="EmpresaTelefonos" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="MaquinaFiscal" Type="String" MaxLength="14" Unicode="true" FixedLength="false" />
+          <Property Name="TasaIva" Type="Double" />
+          <Property Name="TipoIva" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="PuertoImpresoraFiscal" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Ciudad" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Licencia" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ImprimirOrden" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Plato">
+          <Key>
+            <PropertyRef Name="IdPlato" />
+          </Key>
+          <Property Name="IdPlato" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="Grupo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Codigo" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Precio" Type="Double" />
+          <Property Name="TasaIva" Type="Double" />
+          <Property Name="PrecioConIva" Type="Double" />
+          <Property Name="EnviarComanda" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="PlatosComentarios" Relationship="FeriaModel.PlatoComentario" FromRole="Platos" ToRole="PlatosComentarios" />
+          <NavigationProperty Name="PlatosContornos" Relationship="FeriaModel.PlatoContorno" FromRole="Platos" ToRole="PlatosContornos" />
+          <NavigationProperty Name="PlatosIngredientes" Relationship="FeriaModel.PlatoIngrediente" FromRole="Plato" ToRole="PlatosIngrediente" />
+          <NavigationProperty Name="PlatosCombos" Relationship="FeriaModel.PlatoCombo" FromRole="Plato" ToRole="PlatosCombo" />
+          <NavigationProperty Name="PlatosPresentacions" Relationship="FeriaModel.PlatoPresentacion" FromRole="Plato" ToRole="PlatosPresentacion" />
+        </EntityType>
+        <EntityType Name="PlatosComentario">
+          <Key>
+            <PropertyRef Name="IdPlatoComentario" />
+          </Key>
+          <Property Name="IdPlatoComentario" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="IdPlato" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="Comentario" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Plato" Relationship="FeriaModel.PlatoComentario" FromRole="PlatosComentarios" ToRole="Platos" />
+        </EntityType>
+        <EntityType Name="PlatosContorno">
+          <Key>
+            <PropertyRef Name="IdPlatoContorno" />
+          </Key>
+          <Property Name="IdPlatoContorno" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="IdPlato" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="Contorno" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Plato" Relationship="FeriaModel.PlatoContorno" FromRole="PlatosContornos" ToRole="Platos" />
+        </EntityType>
+        <EntityType Name="Proveedore">
+          <Key>
+            <PropertyRef Name="IdProveedor" />
+          </Key>
+          <Property Name="IdProveedor" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="RazonSocial" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="CedulaRif" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Direccion" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Telefonos" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Name="IdUsuario" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="Cedula" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Nombre" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="TipoUsuario" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Clave" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Codigo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="PuedeDarConsumoInterno" Type="Boolean" />
+          <Property Name="PuedeSepararCuentas" Type="Boolean" />
+          <Property Name="PuedePedirCorteDeCuenta" Type="Boolean" />
+          <Property Name="Puntos" Type="Double" />
+          <Property Name="Activo" Type="Boolean" />
+          <Property Name="Direccion" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="Telefonos" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <Association Name="AjusteIngrediente">
+          <End Role="AjustesInventario" Type="FeriaModel.AjustesInventario" Multiplicity="0..1" />
+          <End Role="AjustesInventarioIngredientes" Type="FeriaModel.AjustesInventarioIngrediente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AjustesInventario">
+              <PropertyRef Name="IdAjuste" />
+            </Principal>
+            <Dependent Role="AjustesInventarioIngredientes">
+              <PropertyRef Name="IdAjuste" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CompraIngredientes">
+          <End Role="Compras" Type="FeriaModel.Compra" Multiplicity="0..1" />
+          <End Role="ComprasIngredientes" Type="FeriaModel.ComprasIngrediente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Compras">
+              <PropertyRef Name="IdCompra" />
+            </Principal>
+            <Dependent Role="ComprasIngredientes">
+              <PropertyRef Name="IdCompra" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Ingredienteinventarios">
+          <End Role="Ingredientes" Type="FeriaModel.Ingrediente" Multiplicity="0..1" />
+          <End Role="IngredientesInventarios" Type="FeriaModel.IngredientesInventario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ingredientes">
+              <PropertyRef Name="IdIngrediente" />
+            </Principal>
+            <Dependent Role="IngredientesInventarios">
+              <PropertyRef Name="IdIngrediente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MesaMesaAbierta">
+          <End Role="Mesas" Type="FeriaModel.Mesa" Multiplicity="0..1" />
+          <End Role="MesasAbiertas" Type="FeriaModel.MesasAbierta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Mesas">
+              <PropertyRef Name="IdMesa" />
+            </Principal>
+            <Dependent Role="MesasAbiertas">
+              <PropertyRef Name="IdMesa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MesaAbiertaPlato">
+          <End Role="MesasAbiertas" Type="FeriaModel.MesasAbierta" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="MesasAbiertasPlatos" Type="FeriaModel.MesasAbiertasPlato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MesasAbiertas">
+              <PropertyRef Name="IdMesaAbierta" />
+            </Principal>
+            <Dependent Role="MesasAbiertasPlatos">
+              <PropertyRef Name="IdMesaAbierta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PlatoComentario">
+          <End Role="Platos" Type="FeriaModel.Plato" Multiplicity="0..1" />
+          <End Role="PlatosComentarios" Type="FeriaModel.PlatosComentario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Platos">
+              <PropertyRef Name="IdPlato" />
+            </Principal>
+            <Dependent Role="PlatosComentarios">
+              <PropertyRef Name="IdPlato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PlatoContorno">
+          <End Role="Platos" Type="FeriaModel.Plato" Multiplicity="0..1" />
+          <End Role="PlatosContornos" Type="FeriaModel.PlatosContorno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Platos">
+              <PropertyRef Name="IdPlato" />
+            </Principal>
+            <Dependent Role="PlatosContornos">
+              <PropertyRef Name="IdPlato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="PlatosIngrediente">
+          <Key>
+            <PropertyRef Name="IdPlatoIngrediente" />
+          </Key>
+          <Property Type="String" Name="IdPlatoIngrediente" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdPlato" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdIngrediente" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="Cantidad" />
+          <Property Type="Double" Name="Raciones" />
+          <Property Type="Double" Name="CostoRacion" />
+          <Property Type="String" Name="Ingrediente" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UnidadMedida" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="Total" />
+          <NavigationProperty Name="Plato" Relationship="FeriaModel.PlatoIngrediente" FromRole="PlatosIngrediente" ToRole="Plato" />
+          <Property Type="String" Name="IdPlatoPresentacion" MaxLength="6" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="PlatoIngrediente">
+          <End Type="FeriaModel.Plato" Role="Plato" Multiplicity="0..1" />
+          <End Type="FeriaModel.PlatosIngrediente" Role="PlatosIngrediente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Plato">
+              <PropertyRef Name="IdPlato" />
+            </Principal>
+            <Dependent Role="PlatosIngrediente">
+              <PropertyRef Name="IdPlato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Factura">
+          <Key>
+            <PropertyRef Name="IdFactura" />
+          </Key>
+          <Property Type="String" Name="IdFactura" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Fecha" />
+          <Property Type="String" Name="Numero" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Cajero" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CedulaRif" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RazonSocial" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Direccion" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="MontoGravable" />
+          <Property Type="Double" Name="MontoExento" />
+          <Property Type="Double" Name="MontoIva" />
+          <Property Type="Double" Name="MontoTotal" />
+          <Property Type="Double" Name="Efectivo" />
+          <Property Type="Double" Name="Cheque" />
+          <Property Type="Double" Name="Tarjeta" />
+          <Property Type="String" Name="NumeroZ" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MaquinaFiscal" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdCajero" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Hora" />
+          <Property Type="Double" Name="Cambio" />
+          <Property Type="Boolean" Name="Anulado" />
+          <Property Type="Double" Name="TasaIva" />
+          <Property Type="Double" Name="CestaTicket" />
+          <Property Type="Double" Name="Saldo" />
+          <Property Type="Double" Name="ConsumoInterno" />
+          <Property Type="String" Name="Tipo" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NumeroOrden" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="FacturasPlatos" Relationship="FeriaModel.FacturasDetalles" FromRole="Factura" ToRole="FacturasPlato" />
+          <Property Type="Boolean" Name="LibroVentas" />
+        </EntityType>
+        <EntityType Name="FacturasPlato">
+          <Key>
+            <PropertyRef Name="IdFacturaPlato" />
+          </Key>
+          <Property Type="String" Name="IdFacturaPlato" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdFactura" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Idplato" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Codigo" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Grupo" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Descripcion" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Cantidad" />
+          <Property Type="Double" Name="Precio" />
+          <Property Type="Double" Name="TasaIva" />
+          <Property Type="Double" Name="PrecioConIva" />
+          <Property Type="Double" Name="Total" />
+          <NavigationProperty Name="Factura" Relationship="FeriaModel.FacturasDetalles" FromRole="FacturasPlato" ToRole="Factura" />
+        </EntityType>
+        <EntityType Name="PlatosCombo">
+          <Key>
+            <PropertyRef Name="IdPlatoCombo" />
+          </Key>
+          <Property Type="String" Name="IdPlatoCombo" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdPlato" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdCombo" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Plato" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Plato1" Relationship="FeriaModel.PlatoCombo" FromRole="PlatosCombo" ToRole="Plato" />
+        </EntityType>
+        <EntityType Name="PlatosPresentacion">
+          <Key>
+            <PropertyRef Name="IdPlatoPresentacion" />
+          </Key>
+          <Property Type="String" Name="IdPlato" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Presentacion" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdPlatoPresentacion" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="Precio" />
+          <NavigationProperty Name="Plato" Relationship="FeriaModel.PlatoPresentacion" FromRole="PlatosPresentacion" ToRole="Plato" />
+        </EntityType>
+        <Association Name="FacturasDetalles">
+          <End Type="FeriaModel.Factura" Role="Factura" Multiplicity="0..1" />
+          <End Type="FeriaModel.FacturasPlato" Role="FacturasPlato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Factura">
+              <PropertyRef Name="IdFactura" />
+            </Principal>
+            <Dependent Role="FacturasPlato">
+              <PropertyRef Name="IdFactura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PlatoCombo">
+          <End Type="FeriaModel.Plato" Role="Plato" Multiplicity="0..1" />
+          <End Type="FeriaModel.PlatosCombo" Role="PlatosCombo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Plato">
+              <PropertyRef Name="IdPlato" />
+            </Principal>
+            <Dependent Role="PlatosCombo">
+              <PropertyRef Name="IdPlato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PlatoPresentacion">
+          <End Type="FeriaModel.Plato" Role="Plato" Multiplicity="0..1" />
+          <End Type="FeriaModel.PlatosPresentacion" Role="PlatosPresentacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Plato">
+              <PropertyRef Name="IdPlato" />
+            </Principal>
+            <Dependent Role="PlatosPresentacion">
+              <PropertyRef Name="IdPlato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="LibroVenta">
+          <Key>
+            <PropertyRef Name="IdLibroVentas" />
+          </Key>
+          <Property Type="String" Name="IdLibroVentas" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Fecha" />
+          <Property Type="String" Name="Factura" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NumeroZ" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RegistroMaquinaFiscal" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RazonSocial" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CedulaRif" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Comprobante" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FacturaAfectada" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TipoOperacion" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="MontoTotal" />
+          <Property Type="Double" Name="MontoGravable" />
+          <Property Type="Double" Name="MontoExento" />
+          <Property Type="Double" Name="MontoIva" />
+          <Property Type="Double" Name="TasaIva" />
+          <Property Type="Double" Name="IvaRetenido" />
+          <Property Type="Int32" Name="Año" />
+          <Property Type="Int32" Name="Mes" />
+          <Property Type="String" Name="Direccion" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="MontoServicio" />
+          <Property Type="Double" Name="MontoGravableNoContribuyentes" />
+          <Property Type="Double" Name="MontoIvaNoContribuyentes" />
+          <Property Type="Double" Name="MontoGravableContribuyentes" />
+          <Property Type="Double" Name="MontoIvaContribuyentes" />
+          <Property Type="Double" Name="TasaIvaNoContribuyentes" />
+          <Property Type="Double" Name="TasaIvaContribuyentes" />
+          <Property Type="String" Name="Inicio" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Final" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FeriaModelStoreContainer" CdmEntityContainer="FeriaEntities">
+          <EntitySetMapping Name="AjustesInventarios"><EntityTypeMapping TypeName="FeriaModel.AjustesInventario"><MappingFragment StoreEntitySet="AjustesInventario">
+            <ScalarProperty Name="IdAjuste" ColumnName="IdAjuste" />
+            <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+            <ScalarProperty Name="Numero" ColumnName="Numero" />
+            <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+            <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="AjustesInventarioIngredientes"><EntityTypeMapping TypeName="FeriaModel.AjustesInventarioIngrediente"><MappingFragment StoreEntitySet="AjustesInventarioIngredientes">
+            <ScalarProperty Name="IdAjustesInventarioIngredientes" ColumnName="IdAjustesInventarioIngredientes" />
+            <ScalarProperty Name="IdIngrediente" ColumnName="IdIngrediente" />
+            <ScalarProperty Name="Ingrediente" ColumnName="Ingrediente" />
+            <ScalarProperty Name="UnidadMedida" ColumnName="UnidadMedida" />
+            <ScalarProperty Name="ExistenciaAnterior" ColumnName="ExistenciaAnterior" />
+            <ScalarProperty Name="ExistenciaNueva" ColumnName="ExistenciaNueva" />
+            <ScalarProperty Name="Ajuste" ColumnName="Ajuste" />
+            <ScalarProperty Name="IdAjuste" ColumnName="IdAjuste" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Clientes"><EntityTypeMapping TypeName="FeriaModel.Cliente"><MappingFragment StoreEntitySet="Clientes">
+            <ScalarProperty Name="CedulaRif" ColumnName="CedulaRif" />
+            <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+            <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+            <ScalarProperty Name="DiasCredito" ColumnName="DiasCredito" />
+            <ScalarProperty Name="LimiteCredito" ColumnName="LimiteCredito" />
+            <ScalarProperty Name="Telefonos" ColumnName="Telefonos" />
+            <ScalarProperty Name="Contacto" ColumnName="Contacto" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Compras"><EntityTypeMapping TypeName="FeriaModel.Compra"><MappingFragment StoreEntitySet="Compras">
+            <ScalarProperty Name="ActualizadoInventario" ColumnName="ActualizadoInventario" />
+                <ScalarProperty Name="FechaInventario" ColumnName="FechaInventario" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="IdCompra" ColumnName="IdCompra" />
+            <ScalarProperty Name="Mes" ColumnName="Mes" />
+            <ScalarProperty Name="Año" ColumnName="Año" />
+            <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+            <ScalarProperty Name="Numero" ColumnName="Numero" />
+            <ScalarProperty Name="NumeroControl" ColumnName="NumeroControl" />
+            <ScalarProperty Name="MontoExento" ColumnName="MontoExento" />
+            <ScalarProperty Name="MontoGravable" ColumnName="MontoGravable" />
+            <ScalarProperty Name="MontoIva" ColumnName="MontoIva" />
+            <ScalarProperty Name="MontoTotal" ColumnName="MontoTotal" />
+            <ScalarProperty Name="CedulaRif" ColumnName="CedulaRif" />
+            <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+            <ScalarProperty Name="TasaIva" ColumnName="TasaIva" />
+            <ScalarProperty Name="LibroCompras" ColumnName="LibroCompras" />
+            <ScalarProperty Name="MontoSinDerechoCredito" ColumnName="MontoSinDerechoCredito" />
+            <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+            <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ComprasIngredientes"><EntityTypeMapping TypeName="FeriaModel.ComprasIngrediente"><MappingFragment StoreEntitySet="ComprasIngredientes">
+            <ScalarProperty Name="CostoNeto" ColumnName="CostoNeto" />
+                <ScalarProperty Name="Iva" ColumnName="Iva" />
+                <ScalarProperty Name="IdCompraIngrediente" ColumnName="IdCompraIngrediente" />
+            <ScalarProperty Name="IdCompra" ColumnName="IdCompra" />
+            <ScalarProperty Name="Ingrediente" ColumnName="Ingrediente" />
+            <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+            <ScalarProperty Name="Costo" ColumnName="Costo" />
+            <ScalarProperty Name="TasaIva" ColumnName="TasaIva" />
+            <ScalarProperty Name="CostoIva" ColumnName="CostoIva" />
+            <ScalarProperty Name="CantidadNeta" ColumnName="CantidadNeta" />
+            <ScalarProperty Name="Total" ColumnName="Total" />
+            <ScalarProperty Name="IdIngrediente" ColumnName="IdIngrediente" />
+            <ScalarProperty Name="ExistenciaAnterior" ColumnName="ExistenciaAnterior" />
+            <ScalarProperty Name="ExistenciaNueva" ColumnName="ExistenciaNueva" />
+            <ScalarProperty Name="UnidadMedida" ColumnName="UnidadMedida" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Contadores"><EntityTypeMapping TypeName="FeriaModel.Contadore"><MappingFragment StoreEntitySet="Contadores">
+            <ScalarProperty Name="Variable" ColumnName="Variable" />
+            <ScalarProperty Name="Valor" ColumnName="Valor" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Ingredientes"><EntityTypeMapping TypeName="FeriaModel.Ingrediente"><MappingFragment StoreEntitySet="Ingredientes">
+            <ScalarProperty Name="TasaIva" ColumnName="TasaIva" />
+                <ScalarProperty Name="LlevaInventario" ColumnName="LlevaInventario" />
+                <ScalarProperty Name="Insumo" ColumnName="Insumo" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="IdIngrediente" ColumnName="IdIngrediente" />
+            <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+            <ScalarProperty Name="UnidadMedida" ColumnName="UnidadMedida" />
+            <ScalarProperty Name="Costo" ColumnName="Costo" />
+            <ScalarProperty Name="Raciones" ColumnName="Raciones" />
+            <ScalarProperty Name="Existencia" ColumnName="Existencia" />
+            <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="IngredientesInventarios"><EntityTypeMapping TypeName="FeriaModel.IngredientesInventario"><MappingFragment StoreEntitySet="IngredientesInventarios">
+            <ScalarProperty Name="IdIngredienteInventario" ColumnName="IdIngredienteInventario" />
+            <ScalarProperty Name="IdIngrediente" ColumnName="IdIngrediente" />
+            <ScalarProperty Name="Ingrediente" ColumnName="Ingrediente" />
+            <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+            <ScalarProperty Name="Entradas" ColumnName="Entradas" />
+            <ScalarProperty Name="Salidas" ColumnName="Salidas" />
+            <ScalarProperty Name="Final" ColumnName="Final" />
+            <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+            <ScalarProperty Name="InventarioFisico" ColumnName="InventarioFisico" />
+            <ScalarProperty Name="Ajuste" ColumnName="Ajuste" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Mesas"><EntityTypeMapping TypeName="FeriaModel.Mesa"><MappingFragment StoreEntitySet="Mesas">
+            <ScalarProperty Name="IdMesa" ColumnName="IdMesa" />
+            <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+            <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+            <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+            <ScalarProperty Name="CobraServicio" ColumnName="CobraServicio" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MesasAbiertas"><EntityTypeMapping TypeName="FeriaModel.MesasAbierta"><MappingFragment StoreEntitySet="MesasAbiertas">
+            <ScalarProperty Name="IdMesaAbierta" ColumnName="IdMesaAbierta" />
+            <ScalarProperty Name="IdMesa" ColumnName="IdMesa" />
+            <ScalarProperty Name="IdMesonero" ColumnName="IdMesonero" />
+            <ScalarProperty Name="Mesa" ColumnName="Mesa" />
+            <ScalarProperty Name="Mesonero" ColumnName="Mesonero" />
+            <ScalarProperty Name="Personas" ColumnName="Personas" />
+            <ScalarProperty Name="Apertura" ColumnName="Apertura" />
+            <ScalarProperty Name="MontoGravable" ColumnName="MontoGravable" />
+            <ScalarProperty Name="MontoExento" ColumnName="MontoExento" />
+            <ScalarProperty Name="MontoIva" ColumnName="MontoIva" />
+            <ScalarProperty Name="MontoTotal" ColumnName="MontoTotal" />
+            <ScalarProperty Name="MontoServicio" ColumnName="MontoServicio" />
+            <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+            <ScalarProperty Name="Numero" ColumnName="Numero" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MesasAbiertasPlatos"><EntityTypeMapping TypeName="FeriaModel.MesasAbiertasPlato"><MappingFragment StoreEntitySet="MesasAbiertasPlatos">
+            <ScalarProperty Name="IdMesaAbiertaPlato" ColumnName="IdMesaAbiertaPlato" />
+            <ScalarProperty Name="IdMesaAbierta" ColumnName="IdMesaAbierta" />
+            <ScalarProperty Name="Idplato" ColumnName="Idplato" />
+            <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+            <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+            <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+            <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+            <ScalarProperty Name="Precio" ColumnName="Precio" />
+            <ScalarProperty Name="TasaIva" ColumnName="TasaIva" />
+            <ScalarProperty Name="PrecioConIva" ColumnName="PrecioConIva" />
+            <ScalarProperty Name="Total" ColumnName="Total" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Parametros"><EntityTypeMapping TypeName="FeriaModel.Parametro"><MappingFragment StoreEntitySet="Parametros">
+            <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+            <ScalarProperty Name="EmpresaRif" ColumnName="EmpresaRif" />
+            <ScalarProperty Name="EmpresaDireccion" ColumnName="EmpresaDireccion" />
+            <ScalarProperty Name="EmpresaTelefonos" ColumnName="EmpresaTelefonos" />
+            <ScalarProperty Name="MaquinaFiscal" ColumnName="MaquinaFiscal" />
+            <ScalarProperty Name="TasaIva" ColumnName="TasaIva" />
+            <ScalarProperty Name="TipoIva" ColumnName="TipoIva" />
+            <ScalarProperty Name="PuertoImpresoraFiscal" ColumnName="PuertoImpresoraFiscal" />
+            <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+            <ScalarProperty Name="Licencia" ColumnName="Licencia" />
+            <ScalarProperty Name="ImprimirOrden" ColumnName="ImprimirOrden" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Platos"><EntityTypeMapping TypeName="FeriaModel.Plato"><MappingFragment StoreEntitySet="Platos">
+            <ScalarProperty Name="IdPlato" ColumnName="IdPlato" />
+            <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+            <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+            <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+            <ScalarProperty Name="Precio" ColumnName="Precio" />
+            <ScalarProperty Name="TasaIva" ColumnName="TasaIva" />
+            <ScalarProperty Name="PrecioConIva" ColumnName="PrecioConIva" />
+            <ScalarProperty Name="EnviarComanda" ColumnName="EnviarComanda" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PlatosComentarios"><EntityTypeMapping TypeName="FeriaModel.PlatosComentario"><MappingFragment StoreEntitySet="PlatosComentarios">
+            <ScalarProperty Name="IdPlatoComentario" ColumnName="IdPlatoComentario" />
+            <ScalarProperty Name="IdPlato" ColumnName="IdPlato" />
+            <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PlatosContornos"><EntityTypeMapping TypeName="FeriaModel.PlatosContorno"><MappingFragment StoreEntitySet="PlatosContornos">
+            <ScalarProperty Name="IdPlatoContorno" ColumnName="IdPlatoContorno" />
+            <ScalarProperty Name="IdPlato" ColumnName="IdPlato" />
+            <ScalarProperty Name="Contorno" ColumnName="Contorno" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Proveedores"><EntityTypeMapping TypeName="FeriaModel.Proveedore"><MappingFragment StoreEntitySet="Proveedores">
+            <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+            <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+            <ScalarProperty Name="CedulaRif" ColumnName="CedulaRif" />
+            <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+            <ScalarProperty Name="Telefonos" ColumnName="Telefonos" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Usuarios"><EntityTypeMapping TypeName="FeriaModel.Usuario"><MappingFragment StoreEntitySet="Usuarios">
+            <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+            <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+            <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+            <ScalarProperty Name="TipoUsuario" ColumnName="TipoUsuario" />
+            <ScalarProperty Name="Clave" ColumnName="Clave" />
+            <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+            <ScalarProperty Name="PuedeDarConsumoInterno" ColumnName="PuedeDarConsumoInterno" />
+            <ScalarProperty Name="PuedeSepararCuentas" ColumnName="PuedeSepararCuentas" />
+            <ScalarProperty Name="PuedePedirCorteDeCuenta" ColumnName="PuedePedirCorteDeCuenta" />
+            <ScalarProperty Name="Puntos" ColumnName="Puntos" />
+            <ScalarProperty Name="Activo" ColumnName="Activo" />
+            <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+            <ScalarProperty Name="Telefonos" ColumnName="Telefonos" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PlatosIngredientes">
+            <EntityTypeMapping TypeName="FeriaModel.PlatosIngrediente">
+              <MappingFragment StoreEntitySet="PlatosIngredientes">
+                <ScalarProperty Name="IdPlatoPresentacion" ColumnName="IdPlatoPresentacion" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="UnidadMedida" ColumnName="UnidadMedida" />
+                <ScalarProperty Name="Ingrediente" ColumnName="Ingrediente" />
+                <ScalarProperty Name="CostoRacion" ColumnName="CostoRacion" />
+                <ScalarProperty Name="Raciones" ColumnName="Raciones" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="IdIngrediente" ColumnName="IdIngrediente" />
+                <ScalarProperty Name="IdPlato" ColumnName="IdPlato" />
+                <ScalarProperty Name="IdPlatoIngrediente" ColumnName="IdPlatoIngrediente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Facturas">
+            <EntityTypeMapping TypeName="FeriaModel.Factura">
+              <MappingFragment StoreEntitySet="Facturas">
+                <ScalarProperty Name="LibroVentas" ColumnName="LibroVentas" />
+                <ScalarProperty Name="NumeroOrden" ColumnName="NumeroOrden" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="ConsumoInterno" ColumnName="ConsumoInterno" />
+                <ScalarProperty Name="Saldo" ColumnName="Saldo" />
+                <ScalarProperty Name="CestaTicket" ColumnName="CestaTicket" />
+                <ScalarProperty Name="TasaIva" ColumnName="TasaIva" />
+                <ScalarProperty Name="Anulado" ColumnName="Anulado" />
+                <ScalarProperty Name="Cambio" ColumnName="Cambio" />
+                <ScalarProperty Name="Hora" ColumnName="Hora" />
+                <ScalarProperty Name="IdCajero" ColumnName="IdCajero" />
+                <ScalarProperty Name="MaquinaFiscal" ColumnName="MaquinaFiscal" />
+                <ScalarProperty Name="NumeroZ" ColumnName="NumeroZ" />
+                <ScalarProperty Name="Tarjeta" ColumnName="Tarjeta" />
+                <ScalarProperty Name="Cheque" ColumnName="Cheque" />
+                <ScalarProperty Name="Efectivo" ColumnName="Efectivo" />
+                <ScalarProperty Name="MontoTotal" ColumnName="MontoTotal" />
+                <ScalarProperty Name="MontoIva" ColumnName="MontoIva" />
+                <ScalarProperty Name="MontoExento" ColumnName="MontoExento" />
+                <ScalarProperty Name="MontoGravable" ColumnName="MontoGravable" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+                <ScalarProperty Name="CedulaRif" ColumnName="CedulaRif" />
+                <ScalarProperty Name="Cajero" ColumnName="Cajero" />
+                <ScalarProperty Name="Numero" ColumnName="Numero" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="IdFactura" ColumnName="IdFactura" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FacturasPlatos">
+            <EntityTypeMapping TypeName="FeriaModel.FacturasPlato">
+              <MappingFragment StoreEntitySet="FacturasPlatos">
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="PrecioConIva" ColumnName="PrecioConIva" />
+                <ScalarProperty Name="TasaIva" ColumnName="TasaIva" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Idplato" ColumnName="Idplato" />
+                <ScalarProperty Name="IdFactura" ColumnName="IdFactura" />
+                <ScalarProperty Name="IdFacturaPlato" ColumnName="IdFacturaPlato" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlatosCombos">
+            <EntityTypeMapping TypeName="FeriaModel.PlatosCombo">
+              <MappingFragment StoreEntitySet="PlatosCombos">
+                <ScalarProperty Name="Plato" ColumnName="Plato" />
+                <ScalarProperty Name="IdCombo" ColumnName="IdCombo" />
+                <ScalarProperty Name="IdPlato" ColumnName="IdPlato" />
+                <ScalarProperty Name="IdPlatoCombo" ColumnName="IdPlatoCombo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlatosPresentacions">
+            <EntityTypeMapping TypeName="FeriaModel.PlatosPresentacion">
+              <MappingFragment StoreEntitySet="PlatosPresentacion">
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="IdPlatoPresentacion" ColumnName="IdPlatoPresentacion" />
+                <ScalarProperty Name="Presentacion" ColumnName="Presentacion" />
+                <ScalarProperty Name="IdPlato" ColumnName="IdPlato" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LibroVentas">
+            <EntityTypeMapping TypeName="FeriaModel.LibroVenta">
+              <MappingFragment StoreEntitySet="LibroVentas">
+                <ScalarProperty Name="Final" ColumnName="Final" />
+                <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+                <ScalarProperty Name="TasaIvaContribuyentes" ColumnName="TasaIvaContribuyentes" />
+                <ScalarProperty Name="TasaIvaNoContribuyentes" ColumnName="TasaIvaNoContribuyentes" />
+                <ScalarProperty Name="MontoIvaContribuyentes" ColumnName="MontoIvaContribuyentes" />
+                <ScalarProperty Name="MontoGravableContribuyentes" ColumnName="MontoGravableContribuyentes" />
+                <ScalarProperty Name="MontoIvaNoContribuyentes" ColumnName="MontoIvaNoContribuyentes" />
+                <ScalarProperty Name="MontoGravableNoContribuyentes" ColumnName="MontoGravableNoContribuyentes" />
+                <ScalarProperty Name="MontoServicio" ColumnName="MontoServicio" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Mes" ColumnName="Mes" />
+                <ScalarProperty Name="Año" ColumnName="Año" />
+                <ScalarProperty Name="IvaRetenido" ColumnName="IvaRetenido" />
+                <ScalarProperty Name="TasaIva" ColumnName="TasaIva" />
+                <ScalarProperty Name="MontoIva" ColumnName="MontoIva" />
+                <ScalarProperty Name="MontoExento" ColumnName="MontoExento" />
+                <ScalarProperty Name="MontoGravable" ColumnName="MontoGravable" />
+                <ScalarProperty Name="MontoTotal" ColumnName="MontoTotal" />
+                <ScalarProperty Name="TipoOperacion" ColumnName="TipoOperacion" />
+                <ScalarProperty Name="FacturaAfectada" ColumnName="FacturaAfectada" />
+                <ScalarProperty Name="Comprobante" ColumnName="Comprobante" />
+                <ScalarProperty Name="CedulaRif" ColumnName="CedulaRif" />
+                <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+                <ScalarProperty Name="RegistroMaquinaFiscal" ColumnName="RegistroMaquinaFiscal" />
+                <ScalarProperty Name="NumeroZ" ColumnName="NumeroZ" />
+                <ScalarProperty Name="Factura" ColumnName="Factura" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="IdLibroVentas" ColumnName="IdLibroVentas" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="OKModel">
+        <EntityTypeShape EntityType="FeriaModel.AjustesInventario" Width="1.5" PointX="10.75" PointY="11.25" Height="1.9210009765624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaModel.AjustesInventarioIngrediente" Width="1.5" PointX="13" PointY="11" Height="2.4140429687499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaModel.Cliente" Width="1.5" PointX="12.75" PointY="0.75" Height="2.0853483072916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaModel.Compra" Width="1.5" PointX="10.75" PointY="6" Height="3.8931689453124996" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaModel.ComprasIngrediente" Width="1.5" PointX="13" PointY="6.375" Height="3.2357796223958317" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaModel.Contadore" Width="1.5" PointX="12.75" PointY="3.75" Height="1.2636116536458322" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaModel.Ingrediente" Width="1.5" PointX="5.75" PointY="6.25" Height="2.2496956380208308" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaModel.IngredientesInventario" Width="1.5" PointX="8" PointY="6" Height="2.7427376302083353" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaModel.Mesa" Width="1.5" PointX="5.75" PointY="1.875" Height="1.9210009765625031" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaModel.MesasAbierta" Width="1.5" PointX="8" PointY="1" Height="3.5644742838541674" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaModel.MesasAbiertasPlato" Width="1.5" PointX="10.25" PointY="1.375" Height="2.9070849609375031" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaModel.Parametro" Width="1.5" PointX="14.75" PointY="0.75" Height="2.7427376302083388" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaModel.Plato" Width="1.5" PointX="0.75" PointY="6.125" Height="3.0714322916666683" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaModel.PlatosComentario" Width="1.5" PointX="3" PointY="4" Height="1.5923063151041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaModel.PlatosContorno" Width="1.5" PointX="3" PointY="6.25" Height="1.5923063151041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaModel.Proveedore" Width="1.5" PointX="0.75" PointY="14.75" Height="1.9210009765625031" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaModel.Usuario" Width="1.5" PointX="2.75" PointY="14.75" Height="3.0714322916666674" IsExpanded="true" />
+        <AssociationConnector Association="FeriaModel.AjusteIngrediente" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.25" PointY="12.21050048828125" />
+          <ConnectorPoint PointX="13" PointY="12.21050048828125" />
+        </AssociationConnector>
+        <AssociationConnector Association="FeriaModel.CompraIngredientes" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.25" PointY="7.9928898111979159" />
+          <ConnectorPoint PointX="13" PointY="7.9928898111979159" />
+        </AssociationConnector>
+        <AssociationConnector Association="FeriaModel.Ingredienteinventarios" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.25" PointY="7.3748478190104159" />
+          <ConnectorPoint PointX="8" PointY="7.3748478190104159" />
+        </AssociationConnector>
+        <AssociationConnector Association="FeriaModel.MesaMesaAbierta" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.25" PointY="2.8355004882812516" />
+          <ConnectorPoint PointX="8" PointY="2.8355004882812516" />
+        </AssociationConnector>
+        <AssociationConnector Association="FeriaModel.MesaAbiertaPlato" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.5" PointY="2.8285424804687516" />
+          <ConnectorPoint PointX="10.25" PointY="2.8285424804687516" />
+        </AssociationConnector>
+        <AssociationConnector Association="FeriaModel.PlatoComentario" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.29687375" PointY="6.125" />
+          <ConnectorPoint PointX="1.29687375" PointY="4.8939925130208337" />
+          <ConnectorPoint PointX="1.7213560416666669" PointY="4.8939925130208328" />
+          <ConnectorPoint PointX="1.8880227083333334" PointY="4.8939925130208337" />
+          <ConnectorPoint PointX="3" PointY="4.8939925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="FeriaModel.PlatoContorno" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="7.0461531575520837" />
+          <ConnectorPoint PointX="3" PointY="7.0461531575520837" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="FeriaModel.PlatosIngrediente" Width="1.5" PointX="3" PointY="9.25" Height="2.5783902994791674" />
+        <AssociationConnector Association="FeriaModel.PlatoIngrediente" >
+          <ConnectorPoint PointX="1.5" PointY="9.1964322916666674" />
+          <ConnectorPoint PointX="1.5" PointY="10.621368815104166" />
+          <ConnectorPoint PointX="1.8229186666666666" PointY="10.621368815104166" />
+          <ConnectorPoint PointX="1.9895853333333331" PointY="10.621368815104166" />
+          <ConnectorPoint PointX="3" PointY="10.621368815104166" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="FeriaModel.Factura" Width="1.5" PointX="5.375" PointY="15.375" Height="5.372294921874996" />
+        <EntityTypeShape EntityType="FeriaModel.FacturasPlato" Width="1.5" PointX="7.625" PointY="16.5" Height="2.907084960937496" />
+        <EntityTypeShape EntityType="FeriaModel.PlatosCombo" Width="1.5" PointX="3" PointY="1" Height="1.9802864583333339" />
+        <EntityTypeShape EntityType="FeriaModel.PlatosPresentacion" Width="1.5" PointX="3" PointY="19.25" Height="1.7566536458333246" />
+        <AssociationConnector Association="FeriaModel.FacturasDetalles" >
+          <ConnectorPoint PointX="6.875" PointY="17.953542480468748" />
+          <ConnectorPoint PointX="7.625" PointY="17.953542480468748" />
+        </AssociationConnector>
+        <AssociationConnector Association="FeriaModel.PlatoCombo" >
+          <ConnectorPoint PointX="1.8046893750000002" PointY="6.125" />
+          <ConnectorPoint PointX="1.8046893750000002" PointY="1.990143229166667" />
+          <ConnectorPoint PointX="3" PointY="1.990143229166667" />
+        </AssociationConnector>
+        <AssociationConnector Association="FeriaModel.PlatoPresentacion" >
+          <ConnectorPoint PointX="1.9062519999999998" PointY="9.1964322916666674" />
+          <ConnectorPoint PointX="1.9062519999999998" PointY="14.5" />
+          <ConnectorPoint PointX="2.5" PointY="14.5" />
+          <ConnectorPoint PointX="2.5" PointY="20.128326822916662" />
+          <ConnectorPoint PointX="3" PointY="20.128326822916662" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="FeriaModel.LibroVenta" Width="1.5" PointX="10.375" PointY="14.75" Height="5.5366422526041674" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
